@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Email</title>
+    <style>
+      body { font-family: Arial, sans-serif; }
+      a { color: blue; }
+    </style>
+  </head>
+  <body>
+    <h2>Hi, this is your test email!</h2>
+    <p>Check your open and click tracking.</p>
+
+    <!-- 🔍 Tracking pixel -->
+    <img src="http://localhost:3000/track/open?email=test@example.com&uid=ABC123" width="1" height="1" />
+
+    <!-- 🔗 Click tracking -->
+    <p>
+      <a href="http://localhost:3000/track/click?email=test@example.com&uid=ABC123&redirect=https://example.com">
+        Click this link
+      </a>
+    </p>
+  </body>
+</html>
