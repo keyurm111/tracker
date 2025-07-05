@@ -92,6 +92,11 @@ app.get('/track/click', async (req, res) => {
   res.redirect(redirect);
 });
 
+// Add at the top with other routes
+app.get('/ping', (req, res) => {
+  res.status(200).send('pong');
+});
+
 // 3️⃣ Optional: view logs
 app.get('/logs', async (req, res) => {
   const { data, error } = await supabase.from('email_tracking').select('*');
